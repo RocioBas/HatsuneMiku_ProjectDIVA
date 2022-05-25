@@ -46,13 +46,13 @@ namespace HatsuneMiku_ProjectDIVA
             this.btVsIA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btVsIA.Font = new System.Drawing.Font("Caladea", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVsIA.ForeColor = System.Drawing.Color.LightGreen;
-            this.btVsIA.Location = new System.Drawing.Point(84, 201);
-            this.btVsIA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btVsIA.Location = new System.Drawing.Point(126, 295);
             this.btVsIA.Name = "btVsIA";
-            this.btVsIA.Size = new System.Drawing.Size(277, 40);
+            this.btVsIA.Size = new System.Drawing.Size(416, 62);
             this.btVsIA.TabIndex = 5;
             this.btVsIA.Text = "VS IA";
             this.btVsIA.UseVisualStyleBackColor = false;
+            this.btVsIA.Click += new System.EventHandler(this.btVsIA_Click);
             // 
             // bt1vs1
             // 
@@ -62,13 +62,13 @@ namespace HatsuneMiku_ProjectDIVA
             this.bt1vs1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt1vs1.Font = new System.Drawing.Font("Caladea", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt1vs1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.bt1vs1.Location = new System.Drawing.Point(58, 124);
-            this.bt1vs1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt1vs1.Location = new System.Drawing.Point(84, 182);
             this.bt1vs1.Name = "bt1vs1";
-            this.bt1vs1.Size = new System.Drawing.Size(277, 40);
+            this.bt1vs1.Size = new System.Drawing.Size(416, 62);
             this.bt1vs1.TabIndex = 6;
             this.bt1vs1.Text = "1 VS 1";
             this.bt1vs1.UseVisualStyleBackColor = false;
+            this.bt1vs1.Click += new System.EventHandler(this.bt1vs1_Click);
             // 
             // btAlone
             // 
@@ -79,11 +79,10 @@ namespace HatsuneMiku_ProjectDIVA
             this.btAlone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAlone.Font = new System.Drawing.Font("Caladea", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAlone.ForeColor = System.Drawing.Color.HotPink;
-            this.btAlone.Location = new System.Drawing.Point(28, 40);
-            this.btAlone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btAlone.MaximumSize = new System.Drawing.Size(782, 405);
+            this.btAlone.Location = new System.Drawing.Point(47, 56);
+            this.btAlone.MaximumSize = new System.Drawing.Size(1173, 623);
             this.btAlone.Name = "btAlone";
-            this.btAlone.Size = new System.Drawing.Size(277, 40);
+            this.btAlone.Size = new System.Drawing.Size(416, 62);
             this.btAlone.TabIndex = 7;
             this.btAlone.Text = "ALONE";
             this.btAlone.UseVisualStyleBackColor = false;
@@ -95,10 +94,9 @@ namespace HatsuneMiku_ProjectDIVA
             this.pbBack.BackColor = System.Drawing.Color.Transparent;
             this.pbBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbBack.BackgroundImage")));
             this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbBack.Location = new System.Drawing.Point(0, 319);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbBack.Location = new System.Drawing.Point(0, 466);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(69, 49);
+            this.pbBack.Size = new System.Drawing.Size(104, 75);
             this.pbBack.TabIndex = 11;
             this.pbBack.TabStop = false;
             this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
@@ -111,10 +109,9 @@ namespace HatsuneMiku_ProjectDIVA
             this.btReproductor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btReproductor.Font = new System.Drawing.Font("Caladea", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btReproductor.ForeColor = System.Drawing.Color.Orange;
-            this.btReproductor.Location = new System.Drawing.Point(107, 281);
-            this.btReproductor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btReproductor.Location = new System.Drawing.Point(157, 412);
             this.btReproductor.Name = "btReproductor";
-            this.btReproductor.Size = new System.Drawing.Size(277, 40);
+            this.btReproductor.Size = new System.Drawing.Size(416, 62);
             this.btReproductor.TabIndex = 12;
             this.btReproductor.Text = "REPRODUCTOR";
             this.btReproductor.UseVisualStyleBackColor = false;
@@ -122,11 +119,11 @@ namespace HatsuneMiku_ProjectDIVA
             // 
             // ModoJuego
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(766, 366);
+            this.ClientSize = new System.Drawing.Size(1140, 537);
             this.Controls.Add(this.btReproductor);
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.btAlone);
@@ -134,9 +131,9 @@ namespace HatsuneMiku_ProjectDIVA
             this.Controls.Add(this.btVsIA);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(782, 405);
+            this.MaximumSize = new System.Drawing.Size(1162, 593);
+            this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "ModoJuego";
             this.Text = "ProjectDiva";
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();

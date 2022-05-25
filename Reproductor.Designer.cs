@@ -44,31 +44,28 @@ namespace HatsuneMiku_ProjectDIVA
             this.lbListaVideos.BackColor = System.Drawing.SystemColors.Window;
             this.lbListaVideos.Font = new System.Drawing.Font("Caladea", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbListaVideos.FormattingEnabled = true;
-            this.lbListaVideos.ItemHeight = 15;
-            this.lbListaVideos.Location = new System.Drawing.Point(21, 59);
-            this.lbListaVideos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbListaVideos.ItemHeight = 27;
+            this.lbListaVideos.Location = new System.Drawing.Point(32, 91);
             this.lbListaVideos.Name = "lbListaVideos";
-            this.lbListaVideos.Size = new System.Drawing.Size(122, 139);
+            this.lbListaVideos.Size = new System.Drawing.Size(181, 193);
             this.lbListaVideos.TabIndex = 0;
             // 
             // lbCanciones
             // 
             this.lbCanciones.AutoSize = true;
             this.lbCanciones.Font = new System.Drawing.Font("Caladea", 11.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCanciones.Location = new System.Drawing.Point(45, 22);
-            this.lbCanciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCanciones.Location = new System.Drawing.Point(68, 34);
             this.lbCanciones.Name = "lbCanciones";
-            this.lbCanciones.Size = new System.Drawing.Size(80, 17);
+            this.lbCanciones.Size = new System.Drawing.Size(136, 32);
             this.lbCanciones.TabIndex = 1;
             this.lbCanciones.Text = "Canciones\r\n";
             // 
             // btReproducir
             // 
             this.btReproducir.Font = new System.Drawing.Font("Caladea", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReproducir.Location = new System.Drawing.Point(40, 223);
-            this.btReproducir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btReproducir.Location = new System.Drawing.Point(44, 341);
             this.btReproducir.Name = "btReproducir";
-            this.btReproducir.Size = new System.Drawing.Size(80, 31);
+            this.btReproducir.Size = new System.Drawing.Size(144, 48);
             this.btReproducir.TabIndex = 3;
             this.btReproducir.Text = "Reproducir";
             this.btReproducir.UseVisualStyleBackColor = true;
@@ -80,10 +77,9 @@ namespace HatsuneMiku_ProjectDIVA
             this.pbBack.BackColor = System.Drawing.Color.Transparent;
             this.pbBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbBack.BackgroundImage")));
             this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbBack.Location = new System.Drawing.Point(-3, 322);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbBack.Location = new System.Drawing.Point(-4, 469);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(58, 44);
+            this.pbBack.Size = new System.Drawing.Size(87, 68);
             this.pbBack.TabIndex = 12;
             this.pbBack.TabStop = false;
             this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
@@ -92,7 +88,6 @@ namespace HatsuneMiku_ProjectDIVA
             // 
             this.axWindowsMediaPlayer.Enabled = true;
             this.axWindowsMediaPlayer.Location = new System.Drawing.Point(169, 22);
-            this.axWindowsMediaPlayer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.axWindowsMediaPlayer.Name = "axWindowsMediaPlayer";
             this.axWindowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer.OcxState")));
             this.axWindowsMediaPlayer.Size = new System.Drawing.Size(576, 328);
@@ -100,18 +95,19 @@ namespace HatsuneMiku_ProjectDIVA
             // 
             // Reproductor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(766, 366);
+            this.ClientSize = new System.Drawing.Size(1138, 529);
             this.Controls.Add(this.axWindowsMediaPlayer);
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.btReproducir);
             this.Controls.Add(this.lbCanciones);
             this.Controls.Add(this.lbListaVideos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1162, 593);
+            this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "Reproductor";
             this.Text = "ProjectDiva";
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();

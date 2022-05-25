@@ -10,19 +10,22 @@ namespace HatsuneMiku_ProjectDIVA
 {
     public class Cancion
     {
-        List<String> movimientos;
         string nombre;
         float duracion;
+        int tiempoEnEmpezar;
         bool terminada;
-        //string nivelDificultad;
 
-        public Cancion(string nombre, float duracion)
+        public Cancion(string nombre, float duracion, int tiempoEnEmpezar)
         {
             this.nombre = nombre;
-            this.duracion = duracion; // en segundos??
+            this.duracion = duracion;
+            this.tiempoEnEmpezar = tiempoEnEmpezar;
             terminada = false;
-            movimientos = new List<String>();
-            leerMovimientos();
+        }
+
+        public int GetTiempoEnEmpezar()
+        {
+            return tiempoEnEmpezar;
         }
         
         public string GetNombre()
@@ -55,42 +58,5 @@ namespace HatsuneMiku_ProjectDIVA
             terminada = true;
         }
 
-        private void leerMovimientos()
-        {
-            string line;
-            //Flecha f;
-
-            try
-            {
-                StreamReader fileMovimientos = new StreamReader($"./ficheros/movimientosCanciones/movimientos{nombre}.txt");
-                while((line = fileMovimientos.ReadLine()) != null)
-                {
-                    //f = crearFlecha(line);
-                    movimientos.Add(line);
-                }
-                fileMovimientos.Close();
-            }
-            catch(FileNotFoundException)
-            {
-                // Cambiar ??
-                MessageBox.Show("Fichero no encontrado");
-            }
-            catch(IOException error)
-            {
-                // Cambiar ??
-                MessageBox.Show("ERROR: " + error);
-            }
-        }
-
-        public List<String> GetMovimientos()
-        {
-            return movimientos;
-        }
-
-        /*
-        private Flecha crearFlecha(string line)
-        {
-            return new Flecha(line);
-        }*/
     }
 }

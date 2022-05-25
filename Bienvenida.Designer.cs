@@ -40,26 +40,25 @@ namespace HatsuneMiku_ProjectDIVA
             this.pbStart.BackColor = System.Drawing.Color.Transparent;
             this.pbStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbStart.BackgroundImage")));
             this.pbStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbStart.Location = new System.Drawing.Point(170, 261);
-            this.pbStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbStart.Location = new System.Drawing.Point(255, 402);
             this.pbStart.Name = "pbStart";
-            this.pbStart.Size = new System.Drawing.Size(179, 127);
+            this.pbStart.Size = new System.Drawing.Size(268, 195);
             this.pbStart.TabIndex = 1;
             this.pbStart.TabStop = false;
             this.pbStart.Click += new System.EventHandler(this.pbStart_Click);
             // 
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(766, 366);
+            this.ClientSize = new System.Drawing.Size(1140, 537);
             this.Controls.Add(this.pbStart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(782, 405);
+            this.MaximumSize = new System.Drawing.Size(1162, 593);
+            this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "Inicio";
             this.ShowInTaskbar = false;
             this.Text = "ProjectDiva";

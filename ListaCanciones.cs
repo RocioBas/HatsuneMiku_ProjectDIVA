@@ -25,7 +25,7 @@ namespace HatsuneMiku_ProjectDIVA
 
             try
             {
-                StreamReader fileCanciones = new StreamReader(".\\ficheros\\canciones.txt");
+                StreamReader fileCanciones = new StreamReader("./ficheros/canciones.txt");
                 while ((line = fileCanciones.ReadLine()) != null)
                 {
                     c = crearCancion(line);
@@ -35,35 +35,31 @@ namespace HatsuneMiku_ProjectDIVA
             }
             catch (FileNotFoundException)
             {
-                // Cambiar ??
-                MessageBox.Show("Fichero no encontrado");
+                MessageBox.Show("No se ha encontrado el fichero de las canciones", "Error",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (IOException error)
             {
-                // Cambiar ??
-                MessageBox.Show("ERROR: " + error);
+                MessageBox.Show(error + "", "Error",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private Cancion crearCancion(string line)
         {
             string[] partes = line.Split(';');
-            return new Cancion(partes[0], Single.Parse(partes[1]));
+            return new Cancion(partes[0], Single.Parse(partes[1]), Int32.Parse(partes[2]));
         }
 
-        private int randomNumber()
-        {
-            Random rnd = new Random();
-            //int random  = rnd.Next(0, listaCanciones.Count() + 1);
-            return rnd.Next(0, listaCanciones.Count()); 
-        }
-
+       
         public Cancion CancionAleatoria()
         {
-            //List<Cancion> randomized = (List<Cancion>)listaCanciones.OrderBy(item => rnd.Next());
-            //return listaCanciones[rnd.Next(listaCanciones.Count())]; 
+            Random rng = new Random();
 
-            return listaCanciones[randomNumber()];
+            Cancion[] canciones = listaCanciones.ToArray();
+
+            rng.Shuffle(canciones);
+            return canciones[rng.Next(0, canciones.Length)];
         }
     }
 }

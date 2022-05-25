@@ -15,6 +15,7 @@ namespace HatsuneMiku_ProjectDIVA
     {
         Form modoJuego;
         Form ayuda;
+        Form ranking;
         //SoundPlayer sonidoFondo;
         
         public MenuPrincipal()
@@ -22,6 +23,7 @@ namespace HatsuneMiku_ProjectDIVA
             InitializeComponent();
             ayuda = new Ayuda();
             modoJuego = new ModoJuego();
+            ranking = new Ranking();
             //sonidoFondo = new SoundPlayer(@".\wav\CancionMENU.wav");
            // sonidoFondo.PlayLooping();
         }
@@ -42,6 +44,12 @@ namespace HatsuneMiku_ProjectDIVA
             this.Hide();
             //sonidoFondo.Stop();
             ayuda.ShowDialog();
+        }
+
+        private void btRanking_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ranking.ShowDialog();
         }
     }
 }

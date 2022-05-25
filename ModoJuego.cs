@@ -14,11 +14,15 @@ namespace HatsuneMiku_ProjectDIVA
     {
         Form juegoSingleplayer;
         Form reproductor;
+        Form juegoMultiplayer;
+        Form juegoCpu;
         public ModoJuego()
         {
             InitializeComponent();
             juegoSingleplayer = new JuegoSinglePlayer();
             reproductor = new Reproductor();
+            juegoMultiplayer = new JuegoMultiPlayer();
+            juegoCpu = new JuegoCPU();
 
         }
 
@@ -40,6 +44,18 @@ namespace HatsuneMiku_ProjectDIVA
         {
             this.Hide();
             reproductor.ShowDialog();
+        }
+
+        private void bt1vs1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            juegoMultiplayer.ShowDialog();
+        }
+
+        private void btVsIA_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            juegoCpu.ShowDialog();
         }
     }
 }

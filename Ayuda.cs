@@ -19,8 +19,7 @@ namespace HatsuneMiku_ProjectDIVA
 
         }
 
-        
-
+       
         private void pbBack_Click(object sender, EventArgs e)
         {
             Form menuPrincipal = new MenuPrincipal();

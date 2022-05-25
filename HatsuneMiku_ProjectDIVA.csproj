@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,13 +61,27 @@
     <Compile Include="Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="JuegoCPU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuegoCPU.Designer.cs">
+      <DependentUpon>JuegoCPU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JuegoMultiPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuegoMultiPlayer.Designer.cs">
+      <DependentUpon>JuegoMultiPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="JuegoSinglePlayer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JuegoSinglePlayer.Designer.cs">
       <DependentUpon>JuegoSinglePlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jugador.cs" />
     <Compile Include="ListaCanciones.cs" />
+    <Compile Include="ListaJugadores.cs" />
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +96,31 @@
     </Compile>
     <Compile Include="newPic\Locatition.cs" />
     <Compile Include="Partida.cs" />
+    <Compile Include="PartidaGanadaMultiPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartidaGanadaMultiPlayer.Designer.cs">
+      <DependentUpon>PartidaGanadaMultiPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartidaGanadaSinglePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartidaGanadaSinglePlayer.Designer.cs">
+      <DependentUpon>PartidaGanadaSinglePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartidaMultiplayer.cs" />
+    <Compile Include="PartidaPerdidaMultiPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartidaPerdidaMultiPlayer.Designer.cs">
+      <DependentUpon>PartidaPerdidaMultiPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartidaPerdidaSinglePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartidaPerdidaSinglePlayer.Designer.cs">
+      <DependentUpon>PartidaPerdidaSinglePlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personaje.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +128,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RandomExtensions.cs" />
+    <Compile Include="Ranking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ranking.Designer.cs">
+      <DependentUpon>Ranking.cs</DependentUpon>
     </Compile>
     <Compile Include="Reproductor.cs">
       <SubType>Form</SubType>
@@ -102,6 +149,12 @@
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JuegoCPU.resx">
+      <DependentUpon>JuegoCPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuegoMultiPlayer.resx">
+      <DependentUpon>JuegoMultiPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JuegoSinglePlayer.resx">
       <DependentUpon>JuegoSinglePlayer.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,10 +164,25 @@
     <EmbeddedResource Include="ModoJuego.resx">
       <DependentUpon>ModoJuego.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PartidaGanadaMultiPlayer.resx">
+      <DependentUpon>PartidaGanadaMultiPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartidaGanadaSinglePlayer.resx">
+      <DependentUpon>PartidaGanadaSinglePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartidaPerdidaMultiPlayer.resx">
+      <DependentUpon>PartidaPerdidaMultiPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartidaPerdidaSinglePlayer.resx">
+      <DependentUpon>PartidaPerdidaSinglePlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ranking.resx">
+      <DependentUpon>Ranking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reproductor.resx">
       <DependentUpon>Reproductor.cs</DependentUpon>

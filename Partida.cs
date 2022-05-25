@@ -9,24 +9,19 @@ namespace HatsuneMiku_ProjectDIVA
 {
     public class Partida
     {
-        Cancion cancion;
-        double puntos;
-        int vida;
-        bool terminada;
+        protected Cancion cancion;
+        protected double puntosJugador1;
+        protected int vidaJugador1;
+        protected bool terminada;
         ListaCanciones listaCanciones;
 
         public Partida()
         {
-            puntos = 0;
-            vida = 100;
+            puntosJugador1 = 0;
+            vidaJugador1 = 100;
             terminada = false;
             listaCanciones = new ListaCanciones();
             cancion = listaCanciones.CancionAleatoria();
-        }
-
-        public Partida(Cancion cancion):this()
-        {
-            this.cancion = cancion;
         }
 
         public ListaCanciones GetListaCanciones()
@@ -44,79 +39,89 @@ namespace HatsuneMiku_ProjectDIVA
             this.cancion = cancion;
         }
 
-        public double GetPuntos()
+        public double GetPuntosJugador1()
         {
-            return puntos;
+            return puntosJugador1;
         }
 
-        public void SetPuntos(int puntos)
+        public void SetPuntosJugador1(int puntos)
         {
-            this.puntos = puntos;
+            this.puntosJugador1 = puntos;
         }
 
-        public int GetVida()
+        public int GetVidaJugador1()
         {
-            return vida;
+            int salida;
+
+            if(vidaJugador1 > 100)
+            {
+                salida = 100;
+            }
+            else
+            {
+                salida = vidaJugador1;
+            }
+            return salida;
         }
 
-        public void SetVida(int vida)
+        public void SetVidaJugador1(int vida)
         {
-            this.vida = vida;
+            this.vidaJugador1 = vida;
         }
 
-        public bool EstaTerminada()
+        public bool GetTerminada()
         {
             return terminada;
         }
 
-        public void Terminar()
+        public virtual bool EstaTerminada(long tiempoPartida)
         {
-            terminada = true;
-        }
-
-        public void AddPuntos(bool pulsacionCorrecta)
-        {
-            if(pulsacionCorrecta)
+            if(tiempoPartida < cancion.GetDuracion() && vidaJugador1 > 0)
             {
-                puntos += 100;
+                terminada = false;
             }
             else
             {
-                puntos += 50;
+                terminada = true;
             }
+            return terminada;
         }
 
-        public void AddVida(bool pulsacionCorrecta)
+        public void AddPuntosJugador1(bool pulsacionCorrecta)
         {
             if(pulsacionCorrecta)
             {
-                vida += 15;
+                puntosJugador1 += 100;
             }
             else
             {
-                vida += 10;
+                puntosJugador1 += 30;
             }
         }
 
-        public void QuitarVida()
+        public void AddVidaJugador1(bool pulsacionCorrecta)
         {
-            vida -= 20;
+            if(vidaJugador1 < 100)
+            {
+                if (pulsacionCorrecta)
+                {
+                    vidaJugador1 += 10;
+                }
+                else
+                {
+                    vidaJugador1 += 5;
+                }
+            }
         }
 
-        public bool TeclaPresionadaCorrectamente()
+        public void QuitarVidaJugador1()
         {
-            return false;
+            vidaJugador1 -= 15;
+
+            if (vidaJugador1 < 0)
+                vidaJugador1 = 0;
         }
 
-        public void GenerarFlechas()
-        {
-           
-        }
-
-        public void Juego()
-        {
-
-        }
 
     }
 }

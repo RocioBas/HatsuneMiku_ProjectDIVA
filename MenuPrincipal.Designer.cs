@@ -61,12 +61,13 @@ namespace HatsuneMiku_ProjectDIVA
             this.btRanking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRanking.Font = new System.Drawing.Font("Caladea", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRanking.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.btRanking.Location = new System.Drawing.Point(85, 181);
+            this.btRanking.Location = new System.Drawing.Point(85, 179);
             this.btRanking.Name = "btRanking";
             this.btRanking.Size = new System.Drawing.Size(416, 62);
             this.btRanking.TabIndex = 1;
             this.btRanking.Text = "RANKING";
             this.btRanking.UseVisualStyleBackColor = false;
+            this.btRanking.Click += new System.EventHandler(this.btRanking_Click);
             // 
             // btAyuda
             // 
@@ -77,7 +78,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.btAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAyuda.Font = new System.Drawing.Font("Caladea", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAyuda.ForeColor = System.Drawing.Color.LightGreen;
-            this.btAyuda.Location = new System.Drawing.Point(120, 293);
+            this.btAyuda.Location = new System.Drawing.Point(119, 292);
             this.btAyuda.Name = "btAyuda";
             this.btAyuda.Size = new System.Drawing.Size(416, 62);
             this.btAyuda.TabIndex = 2;
@@ -94,7 +95,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSalir.Font = new System.Drawing.Font("Caladea", 21.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSalir.ForeColor = System.Drawing.Color.Orange;
-            this.btSalir.Location = new System.Drawing.Point(161, 410);
+            this.btSalir.Location = new System.Drawing.Point(158, 405);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(416, 62);
             this.btSalir.TabIndex = 3;
@@ -118,6 +119,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1162, 593);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "MenuPrincipal";
             this.Text = "ProjectDiva";
             this.ResumeLayout(false);
