@@ -448,11 +448,12 @@ namespace HatsuneMiku_ProjectDIVA
             this.Controls.Add(this.LeftArrowFija);
             this.Controls.Add(this.pbPJ1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1162, 593);
             this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "JuegoMultiPlayer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectDiva";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.JuegoMultiPlayer_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.JuegoMultiPlayer_KeyUp);

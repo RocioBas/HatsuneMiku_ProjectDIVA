@@ -156,10 +156,10 @@ namespace HatsuneMiku_ProjectDIVA
         {
             reiniciarJuego();
 
-            if (partida.GetVidaJugador1() > 0)
+            if (partida.GetJugador1().GetVida() > 0)
             {
                 PartidaGanadaSinglePlayer estado = new PartidaGanadaSinglePlayer();
-                estado.lbPuntos.Text = partida.GetPuntosJugador1() + "";
+                estado.lbPuntos.Text = partida.GetJugador1().GetPuntos() + "";
 
                 this.Hide();
                 estado.ShowDialog();
@@ -167,7 +167,7 @@ namespace HatsuneMiku_ProjectDIVA
             else
             {
                 PartidaPerdidaSinglePlayer estado = new PartidaPerdidaSinglePlayer();
-                estado.lbPuntos.Text = partida.GetPuntosJugador1() + "";
+                estado.lbPuntos.Text = partida.GetJugador1().GetPuntos() + "";
 
                 this.Hide();
                 estado.ShowDialog();
@@ -207,8 +207,8 @@ namespace HatsuneMiku_ProjectDIVA
                     }
                     else
                     {
-                        partida.QuitarVidaJugador1();
-                        lbVida.Text = partida.GetVidaJugador1() + "";
+                        partida.GetJugador1().QuitarVida();
+                        lbVida.Text = partida.GetJugador1().GetVida() + "";
                         lbTipoPuntacion.Text = "Bad :(";
                         lbTipoPuntacion.ForeColor = Color.Red;
                     }
@@ -216,17 +216,13 @@ namespace HatsuneMiku_ProjectDIVA
             }
         }
 
-        private void flechaPerdida()
-        {
-            partida.QuitarVidaJugador1();
-        }
-
+      
         private void addStats(bool accionCorrecta)
         {
-            partida.AddPuntosJugador1(accionCorrecta);
-            partida.AddVidaJugador1(accionCorrecta);
-            lbPuntos.Text = partida.GetPuntosJugador1() + "";
-            lbVida.Text = partida.GetVidaJugador1() + "";
+            partida.GetJugador1().AddPuntos(accionCorrecta);
+            partida.GetJugador1().AddVida(accionCorrecta);
+            lbPuntos.Text = partida.GetJugador1().GetPuntos() + "";
+            lbVida.Text = partida.GetJugador1().GetVida() + "";
         }
 
         private void indicaFlechaEnMovimiento(PictureBox flecha)

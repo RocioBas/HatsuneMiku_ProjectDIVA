@@ -61,6 +61,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "Inicio";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectDiva";
             ((System.ComponentModel.ISupportInitialize)(this.pbStart)).EndInit();
             this.ResumeLayout(false);

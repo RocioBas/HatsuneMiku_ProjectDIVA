@@ -10,15 +10,17 @@ namespace HatsuneMiku_ProjectDIVA
     public class Partida
     {
         protected Cancion cancion;
-        protected double puntosJugador1;
-        protected int vidaJugador1;
+        //protected double puntosJugador1;
+        //protected int vidaJugador1;
+        protected Jugador jugador1;
         protected bool terminada;
         ListaCanciones listaCanciones;
 
         public Partida()
         {
-            puntosJugador1 = 0;
-            vidaJugador1 = 100;
+            jugador1 = new Jugador();
+            //puntosJugador1 = 0;
+            //vidaJugador1 = 100;
             terminada = false;
             listaCanciones = new ListaCanciones();
             cancion = listaCanciones.CancionAleatoria();
@@ -39,6 +41,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.cancion = cancion;
         }
 
+        /*
         public double GetPuntosJugador1()
         {
             return puntosJugador1;
@@ -67,16 +70,22 @@ namespace HatsuneMiku_ProjectDIVA
         public void SetVidaJugador1(int vida)
         {
             this.vidaJugador1 = vida;
-        }
+        }*/
 
         public bool GetTerminada()
         {
             return terminada;
         }
 
+        public Jugador GetJugador1()
+        {
+            return jugador1;
+        }
+
+
         public virtual bool EstaTerminada(long tiempoPartida)
         {
-            if(tiempoPartida < cancion.GetDuracion() && vidaJugador1 > 0)
+            if(tiempoPartida < cancion.GetDuracion() && jugador1.GetVida() > 0)
             {
                 terminada = false;
             }
@@ -87,7 +96,7 @@ namespace HatsuneMiku_ProjectDIVA
             return terminada;
         }
 
-        public void AddPuntosJugador1(bool pulsacionCorrecta)
+        /*public void AddPuntosJugador1(bool pulsacionCorrecta)
         {
             if(pulsacionCorrecta)
             {
@@ -120,7 +129,7 @@ namespace HatsuneMiku_ProjectDIVA
 
             if (vidaJugador1 < 0)
                 vidaJugador1 = 0;
-        }
+        }*/
 
 
     }

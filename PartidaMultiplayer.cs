@@ -8,14 +8,13 @@ namespace HatsuneMiku_ProjectDIVA
 {
     class PartidaMultiplayer : Partida
     {
-        int vidaJugador2;
-        double puntosJugador2;
+        Jugador jugador2;
         public PartidaMultiplayer():base()
         {
-            vidaJugador2 = 100;
+            jugador2 = new Jugador();
         }
 
-        public int GetVidaJugador2()
+        /*public int GetVidaJugador2()
         {
             int salida;
 
@@ -43,11 +42,16 @@ namespace HatsuneMiku_ProjectDIVA
         public void SetPuntosJugador2(int puntos)
         {
             this.puntosJugador2 = puntos;
+        }*/
+
+        public Jugador GetJugador2()
+        {
+            return jugador2;
         }
 
         public override bool EstaTerminada(long tiempoPartida)
         {
-            if (tiempoPartida < cancion.GetDuracion() &&  vidaJugador1 > 0 && vidaJugador2 > 0)
+            if (tiempoPartida < cancion.GetDuracion() &&  jugador1.GetVida() > 0 && jugador2.GetVida() > 0)
             {
                 terminada = false;
             }
@@ -62,13 +66,13 @@ namespace HatsuneMiku_ProjectDIVA
         {
             string ganador = "ambos";
 
-            if(vidaJugador1 > 0 && vidaJugador2 <= 0)
+            if(jugador1.GetVida() > 0 && jugador2.GetVida() <= 0)
             {
                 ganador = "jugador1";
             }
             else
             {
-                if(vidaJugador2 > 0 && vidaJugador1 <= 0)
+                if(jugador2.GetVida() > 0 && jugador1.GetVida() <= 0)
                 {
                     ganador = "jugador2";
                 }
@@ -76,7 +80,7 @@ namespace HatsuneMiku_ProjectDIVA
             return ganador;
         }
 
-        public void AddPuntosJugador2(bool pulsacionCorrecta)
+        /*public void AddPuntosJugador2(bool pulsacionCorrecta)
         {
             if (pulsacionCorrecta)
             {
@@ -109,6 +113,6 @@ namespace HatsuneMiku_ProjectDIVA
 
             if (vidaJugador2 < 0)
                 vidaJugador2 = 0;
-        }
+        }*/
     }
 }

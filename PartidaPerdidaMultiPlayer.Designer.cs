@@ -106,11 +106,12 @@ namespace HatsuneMiku_ProjectDIVA
             this.Controls.Add(this.lbContinuar);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1162, 593);
             this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "PartidaPerdidaMultiPlayer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectDiva";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PartidaPerdidaMultiPlayer_KeyDown);
             this.ResumeLayout(false);

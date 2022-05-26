@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace HatsuneMiku_ProjectDIVA
 {
-    class Jugador : IComparable<Jugador>
+    public class Jugador : IComparable<Jugador>
     {
         string nombre;
         double puntos;
+        int vida;
 
         public Jugador(string nombre, double puntos)
         {
@@ -17,7 +18,14 @@ namespace HatsuneMiku_ProjectDIVA
             this.puntos = puntos;
         }
 
-        public Jugador():this("",0)
+        public Jugador(string nombre, double puntos, int vida)
+        {
+            this.nombre = nombre;
+            this.puntos = puntos;
+            this.vida = vida;
+        }
+
+        public Jugador():this("",0,100)
         { }
 
         public string GetNombre()
@@ -30,6 +38,26 @@ namespace HatsuneMiku_ProjectDIVA
             return puntos;
         }
 
+        public int GetVida()
+        {
+            int salida;
+
+            if (vida > 100)
+            {
+                salida = 100;
+            }
+            else
+            {
+                salida = vida;
+            }
+            return salida;
+        }
+
+        public void SetVida(int vida)
+        {
+            this.vida = vida;
+        }
+
         public void SetNombre(string nombre)
         {
             this.nombre = nombre;
@@ -38,6 +66,41 @@ namespace HatsuneMiku_ProjectDIVA
         public void SetPuntos(double puntos)
         {
             this.puntos = puntos;
+        }
+
+        public void AddPuntos(bool pulsacionCorrecta)
+        {
+            if (pulsacionCorrecta)
+            {
+                puntos += 100;
+            }
+            else
+            {
+                puntos += 30;
+            }
+        }
+
+        public void AddVida(bool pulsacionCorrecta)
+        {
+            if (vida < 100)
+            {
+                if (pulsacionCorrecta)
+                {
+                    vida += 10;
+                }
+                else
+                {
+                    vida += 5;
+                }
+            }
+        }
+
+        public void QuitarVida()
+        {
+            vida -= 15;
+
+            if (vida < 0)
+                vida = 0;
         }
 
         public int CompareTo(Jugador j2)

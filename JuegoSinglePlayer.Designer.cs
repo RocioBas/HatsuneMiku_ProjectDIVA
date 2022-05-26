@@ -234,6 +234,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.MaximumSize = new System.Drawing.Size(1162, 593);
             this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "JuegoSinglePlayer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectDiva";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.JuegoSinglePlayer_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.JuegoSinglePlayer_KeyUp);

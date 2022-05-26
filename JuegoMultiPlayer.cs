@@ -180,13 +180,13 @@ namespace HatsuneMiku_ProjectDIVA
         {
             reiniciarJuego();
 
-            if (partida.GetVidaJugador1() > 0 || partida.GetVidaJugador2() > 0)
+            if (partida.GetJugador1().GetVida() > 0 || partida.GetJugador2().GetVida() > 0)
             {
                 PartidaGanadaMultiPlayer estado = new PartidaGanadaMultiPlayer();
 
                 estado.lbGanador.Text = partida.JugadorGanador() ;
-                estado.lbPuntos1.Text = partida.GetPuntosJugador1() + "";
-                estado.lbPuntos2.Text = partida.GetPuntosJugador2() + "";
+                estado.lbPuntos1.Text = partida.GetJugador1().GetPuntos() + "";
+                estado.lbPuntos2.Text = partida.GetJugador2().GetPuntos() + "";
 
                 this.Hide();
                 estado.ShowDialog();
@@ -194,8 +194,8 @@ namespace HatsuneMiku_ProjectDIVA
             else
             {
                 PartidaPerdidaMultiPlayer estado = new PartidaPerdidaMultiPlayer();
-                estado.lbPuntos1.Text = partida.GetPuntosJugador1() + "";
-                estado.lbPuntos2.Text = partida.GetPuntosJugador2() + "";
+                estado.lbPuntos1.Text = partida.GetJugador1().GetPuntos() + "";
+                estado.lbPuntos2.Text = partida.GetJugador2().GetPuntos() + "";
 
                 this.Hide();
                 estado.ShowDialog();
@@ -233,8 +233,8 @@ namespace HatsuneMiku_ProjectDIVA
                     }
                     else
                     {
-                        partida.QuitarVidaJugador1();
-                        lbVida1.Text = partida.GetVidaJugador1() + "";
+                        partida.GetJugador1().QuitarVida();
+                        lbVida1.Text = partida.GetJugador1().GetVida() + "";
                         lbTipoPuntacion1.Text = "Bad :(";
                         lbTipoPuntacion1.ForeColor = Color.Red;
                     }
@@ -265,8 +265,8 @@ namespace HatsuneMiku_ProjectDIVA
                     }
                     else
                     {
-                        partida.QuitarVidaJugador2();
-                        lbVida2.Text = partida.GetVidaJugador2() + "";
+                        partida.GetJugador2().QuitarVida();
+                        lbVida2.Text = partida.GetJugador2().GetVida() + "";
                         lbTipoPuntacion2.Text = "Bad :(";
                         lbTipoPuntacion2.ForeColor = Color.Red;
                     }
@@ -277,18 +277,18 @@ namespace HatsuneMiku_ProjectDIVA
 
         private void addStatsPJ1(bool accionCorrecta)
         {
-            partida.AddPuntosJugador1(accionCorrecta);
-            partida.AddVidaJugador1(accionCorrecta);
-            lbPuntos1.Text = partida.GetPuntosJugador1() + "";
-            lbVida1.Text = partida.GetVidaJugador1() + "";
+            partida.GetJugador1().AddPuntos(accionCorrecta);
+            partida.GetJugador1().AddVida(accionCorrecta);
+            lbPuntos1.Text = partida.GetJugador1().GetPuntos() + "";
+            lbVida1.Text = partida.GetJugador1().GetVida() + "";
         }
 
         private void addStatsPJ2(bool accionCorrecta)
         {
-            partida.AddPuntosJugador2(accionCorrecta);
-            partida.AddVidaJugador2(accionCorrecta);
-            lbPuntos2.Text = partida.GetPuntosJugador2() + "";
-            lbVida2.Text = partida.GetVidaJugador2() + "";
+            partida.GetJugador2().AddPuntos(accionCorrecta);
+            partida.GetJugador2().AddVida(accionCorrecta);
+            lbPuntos2.Text = partida.GetJugador2().GetPuntos() + "";
+            lbVida2.Text = partida.GetJugador2().GetVida() + "";
         }
 
         private void indicaFlechaEnMovimiento(PictureBox flecha)
@@ -351,7 +351,6 @@ namespace HatsuneMiku_ProjectDIVA
             return teclaFija;
         }
 
-
         private void crearTeclas(PictureBox flecha, PictureBox tecla)
         {
             flecha.BackgroundImage = Image.FromFile($"./imagenes/flechas/{flecha.Name}.png");
@@ -361,8 +360,6 @@ namespace HatsuneMiku_ProjectDIVA
             tecla.BackgroundImageLayout = ImageLayout.Stretch;
 
         }
-
-        
 
         private void borrarTeclas(PictureBox flecha, PictureBox tecla)
         {

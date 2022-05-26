@@ -284,6 +284,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.MaximumSize = new System.Drawing.Size(935, 696);
             this.MinimumSize = new System.Drawing.Size(935, 696);
             this.Name = "Ranking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectDiva";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Ranking_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pbMiku)).EndInit();

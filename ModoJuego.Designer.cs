@@ -135,6 +135,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.MaximumSize = new System.Drawing.Size(1162, 593);
             this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "ModoJuego";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectDiva";
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             this.ResumeLayout(false);

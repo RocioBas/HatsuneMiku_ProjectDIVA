@@ -121,6 +121,7 @@ namespace HatsuneMiku_ProjectDIVA
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1162, 593);
             this.Name = "MenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectDiva";
             this.ResumeLayout(false);
 
